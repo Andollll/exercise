@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void){   
+	int a, b;
+
+	printf("두개의 정수를 입력하면 큰 값에서 작은 값을 뺀 결과를 반환 해보겠다!\n두개의 숫자 입력 : ");
+	scanf("%d %d", &a, &b);
+	
+	if (a >= b) {
+			printf("%d - %d = %d", a, b, a - b);
+		}
+		else if (a < b) {
+			printf("%d - %d = %d", b, a, b - a);
+		}
+
+		
+
+
+	return 0;
+}
