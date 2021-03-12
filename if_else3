@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void){   
+	int a, b, c, d;
+	int total = 0;
+
+	printf("순서대로 국,영,수 점수를 입력하시면 학점이 계산됩니다\n 점수 입력 : ");
+	scanf("%d %d %d", &a, &b, &c);
+	d = a + b + c;
+	total = d / 3;
+	if (total >= 90) {
+		printf("당신의 학점은 'A'");
+
+	}
+	else if (total < 90 && total >= 80) {
+		printf("당신의 학점은 'B'\n");
+		printf("총합 %d", d);
+	}
+	else if (total < 80 && total >= 70) {
+		printf("당신의 학점은 'C'\n");
+		printf("총합 %d", d);
+	}
+	else if (total < 70 && total >= 50) {
+		printf("당신의 학점은 'D'\n");
+		printf("총합 %d", d);
+	}
+	else {
+		printf("힘내......");
+	}
+		return 0;
+}
