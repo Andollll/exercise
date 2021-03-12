@@ -1,0 +1,20 @@
+//7-1 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+
+	int n;
+
+	printf("입력하신 숫자 만큼 헬로월드를 반봅합니다 : ");
+	scanf("%d", &n);
+	while (n > 0)
+	{
+		printf("헬로월드 : %d\n", n);
+		n--;
+	}
+	system("pause");
+	return 0;
+	   	  }
