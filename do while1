@@ -1,0 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	int total = 0, num = 1;
+
+	/*do
+	{
+		printf("정수입력(0 to quit): ");
+		scanf("%d", &num);
+		total += num;
+	} while (num != 0);
+	printf("합계 : %d\n", total);                         // while문으로 바꿔보기
+
+	*/
+	
+	/*
+	while (num != 0)                   
+	{
+		num = 0;
+		printf("정수입력(0 to quit) :");
+		scanf("%d", &num);
+		total += num;
+		
+ 	}                                                      // num값을 바꿔 안에들어가기!  
+	
+	printf("합계 : %d\n", total);
+	*/
+
+	printf("정수입력(0 to quit) :");
+	scanf("%d", &num);
+	total += num;
+	
+	while (num != 0)
+	{
+		printf("정수입력(0 to quit) :");                   // 앞에 똑같이 들어가서 do while 문과 똑같이 만들기!
+		scanf("%d", &num);
+		total += num;
+	}
+	printf("합계 : %d\n", total);
+	return 0; 
+
+}
