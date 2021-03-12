@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{   
+	int a = 0;
+
+	printf("1이상 100미만에서 7의 배수와 9의 배수를 알아보자");
+
+	for (; a < 100; a++) {
+		if (a % 7 == 0 && a % 9 != 0) {
+			printf("%d\n", a);
+		}
+		else if (a % 9 == 0 && a % 7 != 0) {
+			printf("%d\n", a);
+		}
+		else if (a % 9 == 0 && a % 7 == 0) {
+			printf("%d\n", a);
+		}
+	}
+	
+	return 0;
+}
