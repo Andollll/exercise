@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	// 몇개의 정수를 입력할것인지 묻기, 그수만큼 정수 입력받기 평균값은 소숫점 이하까지 출력
+	
+	
+	int n, i, c;
+    double hab = 0;
+    printf("몇개의 정수를 입력하시겠어요? : ");
+	scanf("%d", &n);
+	c = n;
+	for (; n > 0; n--)
+	{
+		printf("남은횟수 : %d\n정수를 입력하세요 : ", n);
+		scanf("%d", &i);
+		hab += i;
+	}
+	printf("입력값한 값의 합의 평균 : %.2f", hab / c);
+
+	system("pause");
+	return 0;
+}
+	   	  
