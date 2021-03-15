@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>        //섭씨 온도와 화씨 온도를 반환하는 함수를 생성해보자
+
+void CelToFah(double a) {
+	double out;
+	out = 1.8*a + 32;
+	printf("화씨온도로 반환 합니다 : %.3f\n", out);
+	return;
+}
+
+void FahToCel(double a) {
+	double out;
+	out = (a - 32)/1.8;
+	printf("섭씨온도로 반환합니다 : %.3f\n", out);
+	return;
+}
+
+
+int main(void) {
+	double a, b;
+	double out;
+	printf("섭씨 온도를 입력하세요 : ");
+	scanf("%lf", &a);
+	CelToFah(a);
+	printf("화씨 온도를 입력하세요 : ");
+	scanf("%lf", &b);
+	FahToCel(b);
+	system("pause");
+	return 0;
+}
