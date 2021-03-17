@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+// 두개의 정수를 입력 받아서 구구단을 출력하는 프로그램을 작성 
+// 사용자가 3과 5를 입력하면 3,4,5단이 출력. 3과5를 입력하건 5와3을 입력하건 프로그램은 같은 결과를 출력!
+
+void gu(int a) {
+	int dan;
+	for (dan = 1; dan < 10; dan++) {
+		printf("%d x %d = %d\n", a, dan, a*dan);
+	}
+}
+
+int main(void) {
+	int a, b;
+	printf("두개의 정수 입력시 그 값사이의 구구단을 출력합니다\n두개의 정수를 입력하세요 :");
+	scanf("%d %d", &a, &b);
+	if (a <= b) {
+		while (a <= b) {
+			gu(a);
+			a++;
+		}
+	}
+	else if (a >= b){
+		while (a >= b) {
+			gu(a);
+			a--;
+		}
+	}
+	   	
+	system("pause");
+	return 0;
+
+}
