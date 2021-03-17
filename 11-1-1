@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+  
+// 길이가 5인 int형 배열을 선언해서 프로그램 사용자로부터 총 5개의 정수를 입력받기
+// 그리고 입렵이 끝나면 최댓값 최솟값 입렵된 정수의 총합 을 출력해보기
+            
+int main(void) {
+	int num[5];
+	int a,b;
+	int max, min,add;
+	add = 0;
+	printf("5개의 정수를 입력하세요\n");
+	scanf("%d %d %d %d %d", &num[0], &num[1], &num[2], &num[3], &num[4]);
+	max = min = num[0];
+	for(a = 1; a<5; a++){
+		if (max <= num[a]) {
+			max = num[a];
+		}
+		if (min >= num[a]) {
+			min = num[a];
+		}
+	}
+	for (a = 0; a < 5; a++) {
+		add += num[a];
+	}
+	printf("입력값 중 최댓값은 %d\n", max);
+	printf("입력값 중 최솟값은 %d\n", min);
+	printf("입력값의 총합은 %d\n", add);
+
+	system("pause");
+	return 0;
+
+}
