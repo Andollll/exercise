@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>      // 입력받은 수의 2의 n 승시 n의 최댓값구하기
+
+
+int max(int a) {
+	int re = 1;
+	int n;
+	for (n = 0; re * 2 <= a; n++) {
+		re *= 2;
+	}
+	return n;
+}
+
+int main(void) {
+	int a;
+	printf("입력값의 2의n승시 n의 최대값을 출력합니다 \n숫자를 입력하세요 : ");
+	scanf("%d", &a);
+	if (a == 0) {
+		printf("만족하는 값이 없습니다\n");
+		system("pause");
+		return 0;
+	}
+	printf("입력값 %d\nn의 최대값 : %d\n", a, max(a));
+	system("pause");
+	return 0;
+}
