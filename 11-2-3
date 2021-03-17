@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+  
+//영단어를 입력받아 길이를 계산하여 출력과 아스키코드 높은 거구하기
+
+            
+int main(void) {
+	char str[20];
+	int len = 0;
+	int a, b,c;
+	printf("영어단어를 입력하면 단어의 구성중 아스키코드 값이 가장 높은 값의 문자를 출력 합니다\n영단어를 입력하세요 :");
+	scanf("%s", str);
+	printf("입력하신 단어는 : %s\n", str);
+	while (str[len] != 0) {
+		len++;
+	}
+	a = len + 1;
+	printf("문자열의 길이 : %d\n", a);
+	c = 0;
+	for (b = 0; b < a-1; b++) {
+		if (c <= str[b]) {      // 여기 부호 진짜.. 최대값  어휴 잘좀 생각하자...
+			c = str[b];
+		}
+	}
+	printf("아스키코드 높은값 은 %c", c);
+
+	
+	
+	system("pause");
+	return 0;
+
+}
