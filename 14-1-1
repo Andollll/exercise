@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int SBV(int a) {
+	
+	return a * a;
+}
+
+   int SBR(int *a){
+	   int re = (*a)*(*a);
+	   (*a)++;                      //  () 이걸 안하니.. 인식을 못한다 휴.. () 요것 중요!
+	   return re;
+    }
+
+
+int main(void) {
+	int num, cp;
+	printf("값을 입력하면 그 값의 제곱을 계산합니다\n숫자를 입력하세요 :");
+	scanf("%d", &num);
+	printf("%d의 제곱값 %d\n", num, SBV(num));                //num 의 값은 바뀌지 않을 것이다.
+  
+    printf("값을 입력하면 그 값의 제곱을 계산합니다\n숫자를 입력하세요 :");
+	scanf("%d", &num);
+	cp = num;
+	printf("%d의 제곱값 %d\n", cp, SBR(&num));     // num값을 바꿀수 있다! 하지만 문장을 참으로하기위해 cp추가
+	
+	printf("num의 값 %d\n", num);                 // 바꾼값 보기
+
+	system("pause");
+	return 0;
+
+
+
+}
