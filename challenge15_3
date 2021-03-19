@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main(void) {                         // 10개의 정수 입력받음. 홀수면 앞부터 짝수면 뒤부터 채워나가기
+	int arr[10];
+	int i = 0;
+	int num = 0;
+	int a = 0, b = 0;
+	printf("정수를 입력하세요\n");
+	while (i < 10) {
+		printf("남은 횟수[%d] : ", 10 - i);
+		scanf("%d", &num);
+		if (num % 2 != 0) {
+			arr[a] = num;
+			a++;
+		}
+		else if(num % 2 ==0) {
+			arr[9 - b] = num;
+			b++;
+		}
+		i++;
+	}
+	i = 0;
+	while(i <10){
+	printf("%d ", arr[i]);
+	i++;
+	}
+	return 0;
+}
