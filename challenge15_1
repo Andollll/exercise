@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void EvenN(int ptr[]) {                //짝수출력
+	int en;
+	if (*ptr % 2 == 0) {
+		printf("%d ", *ptr);
+	}
+
+}
+
+void OddN(int ptr[]) {           //홀수 출력
+	int on = 0;
+	if (*ptr % 2 != 0) {
+		printf("%d ", *ptr);
+	}
+}
+
+int main(void) {
+	int num[10], i;
+	printf("정수 10개를 입력하세요(짝수와 홀수로 나눠드립니다\n");
+	for (i = 0; i < 10; i++) {
+		printf("남은횟수(%d):", 10 - i);
+		scanf("%d", &num[i]);
+	}
+	printf("짝수를 출력합니다 :");
+	for (i = 0; i < 10; i++) {
+		EvenN(&num[i]);
+	}
+	printf("\n홀수를 출력합니다 :");
+	for (i = 0; i < 10; i++) {
+		OddN(&num[i]);
+	}
+
+	system("pause");
+	return 0;
+
+
+
+}
