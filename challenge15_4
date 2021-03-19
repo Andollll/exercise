@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+void Palindrome(char a[]) {
+	int i = 0;
+	for (; i < lenght(a) / 2; i++) {
+		if (a[i] != a[lenght(a) - 1 - i]) {
+			printf("회문이 아닙니다");
+			return;
+		}
+		
+	}
+	printf("회문입니다.");
+}
+
+int lenght(char b[]) {
+	int len = 0;
+	int i = 0;
+	while (b[i] != 0) {
+		i++;;
+	}
+	len = i;
+	return len;
+}
+
+
+
+
+int main(void) {
+	char str[50];
+	printf("문자열을 입력하세요 : ");
+	scanf("%s", str);
+	Palindrome(str);
+	return 0;
+}
