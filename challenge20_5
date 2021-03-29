@@ -1,0 +1,90 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+ //가위 바위 보 게임 만들기!
+int main(void)
+{
+	int n, com;
+	int win, lose, draw;
+	win = 0, lose = 0, draw = 0;
+	srand((int)time(NULL));
+	printf("☆☆재밌는 가위 바위 보 게임☆☆\n");
+	printf("--------설명--------\n가위는 1, 바위는 2 보는 3 입니다\n\n");
+	while (1)
+	{
+		printf("\n가위 바위 보 선택해주세요 :");
+		scanf("%d", &n);
+		com = rand() % 3 + 1;
+		if (n == 1)
+		{
+			if (com == 1)
+			{
+				printf("\n당신은 가위 컴퓨터는 가위 : 비겼습니다\n");
+				draw++;
+			}
+			else if (com == 2)
+			{
+				printf("\n당신은 가위 컴퓨터는 바위 : 졌습니다\n");
+				lose++;
+				break;
+			}
+			else if (com == 3)
+			{
+				printf("\n당신은 가위 컴퓨터는 보 : 이겼습니다\n");
+				win++;
+			}
+		}
+		else if (n == 2)
+		{
+			if (com == 1)
+			{
+				printf("\n당신은 바위 컴퓨터는 가위 :  이겼습니다\n");
+				win++;
+			}
+			else if (com == 2)
+			{
+				printf("\n당신은 바위 컴퓨터는 바위 : 비겼습니다\n");
+				draw++;
+			}
+			else if (com == 3)
+			{
+				printf("\n당신은 바위 컴퓨터는 보 : 졌습니다\n");
+				lose++;
+				break;
+			}
+		}
+		else if (n == 3)
+		{
+			if (com == 1)
+			{
+				printf("\n당신은 보 컴퓨터는 가위 : 졌습니다\n");
+				lose++;
+				break;
+			}
+			else if (com == 2)
+			{
+				printf("\n당신은 보 컴퓨터는 바위 : 이겼습니다\n");
+				win++;
+			}
+			else if (com == 3)
+			{
+				printf("\n당신은 보 컴퓨터는 보 : 비겼습니다\n");
+				draw++;
+			}
+		}
+		else
+		{
+			printf("잘못 입력하셨습니다.\n");
+			system("pause");
+			return;
+			
+		}
+	}
+	printf("\n\n\n게임의 결과 %d승 %d무 %d패\n\n\n", win, draw, lose);
+	
+	system("pause");
+	return 0;
+	
+}
