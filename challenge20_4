@@ -13,7 +13,7 @@ int main(void)                        //난수를 활용해 주사위 굴리기!
 	if (n == 1)
 	{
 		for (i = 0; i < 2; i++)
-			printf("%d주사위의 값 : %d\n", 2 - i, rand()%5 + 1);
+			printf("%d주사위의 값 : %d\n", 2 - i, rand()%6 + 1);
 	}
 	else
 	{
