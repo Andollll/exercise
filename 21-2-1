@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+int main(void)                  // 입력받은 문자열을 아라비아 숫자만 합하여 결과를 출력하기
+	char ch[20];
+	int i,a,b;
+	int re = 0;
+	int len;
+	a = 1 - '1';                    //char배열은 문자배열이다... 정수가 아니라 문자로 인식되기때문에!맙소사......!!! 정수가아니라 문자다.. 이게 핵심
+	fputs("아무거나 입력하면 그안의 숫자를 합 합니다", stdout);
+
+	fgets (ch,sizeof(ch),stdin);
+	len = strlen(ch);
+	for (i = 0; i < len; i++)
+	{
+		if (ch[i] >= '1' && ch[i] <= '9') //char배열은 문자배열이다... 정수가 아니라 문자로 인식되기때문에!
+		{
+			b = a + ch[i];
+			re += b;
+		}
+	}
+	printf("%d", re);
+	system("pause");
+
+	return 0;
+
+
+
+}
