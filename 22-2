@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+                                               // 구조체 배열을 활용해보자
+struct employee
+{
+	char name[30];
+	char num[30];
+	int money;
+};
+
+int main(void)
+{
+	struct employee arr[3];
+	int i;
+	for (i = 0; i < 3; i++)
+	{
+		fputs("이름을 입력하세요 :", stdout);
+		scanf("%s", arr[i].name);
+		fputs("주민번호 앞자리를 입력하세요 :", stdout);
+		scanf("%s", arr[i].num);
+		fputs("급여를 입력하세요 :", stdout);
+		scanf("%d", &arr[i].money);
+	};
+	for (i = 0; i < 3; i++)
+	{
+		printf("이름 : %10s\n주민번호 : %6s\n급여 : %10d\n\n", arr[i].name, arr[i].num, arr[i].money);
+
+	};
+	return 0;
+	   	 
+}
