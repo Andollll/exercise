@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+                                    // 두개의 좌표를 입력받아 직사각형의 넓이를 구하기
+typedef struct point
+{
+	int xpos;
+	int ypos;
+}Point;
+
+typedef struct rectangle
+{
+	Point leftup;
+	Point rightdown;
+}Rectangle;
+
+
+void extent(Rectangle a)
+{
+	int result;
+	result = (a.rightdown.xpos - a.leftup.xpos)*(a.leftup.ypos - a.rightdown.ypos);
+	if (result < 0)
+	{
+		result = -1 * result;
+	};
+	printf("직사각형의 넓이를 계산합니다 : %d\n", result);
+
+}
+int main(void)
+{
+	Point a, b;
+	Rectangle A;
+	printf("첫번째 x y좌표를 입력하세요 : ");
+	scanf("%d %d", &a.xpos, &a.ypos);
+	printf("첫번째 x y좌표를 입력하세요 : ");
+	scanf("%d %d", &b.xpos, &b.ypos);
+	A.leftup = a;
+	A.rightdown = b;
+	extent(A);
+	return 0;
+
+}
