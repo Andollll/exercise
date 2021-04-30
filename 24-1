@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	FILE * my;
+	my = fopen("mystory.txt", "wt");
+	char story[50];
+	fputs("#이름 : 홍길동\n", my);
+	fputs("#주민번호 : 123123-444244\n", my);
+	fputs("#전화번호 : 011-2222-3333\n", my);
+	fclose(my);
+	return 0;
+}
